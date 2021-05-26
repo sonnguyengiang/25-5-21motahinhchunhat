@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="rec.js"></script>
+</head>
+<body>
+<canvas id="myCanvas" width="800px" height="600px" style="border: 1px solid black; background-color: #000001"></canvas>
+<script>
+    let chieucao = parseInt(prompt("nhập chiều cao"));
+    let chieurong = parseInt(prompt("chập chiều rộng"));
+
+    let canvas = document.getElementById('myCanvas');
+    let rect = new Rect(canvas.width/2,canvas.height/2,chieurong,chieucao,'red');
+    rect.renderRect(canvas);
+
+
+    class rectangle {
+    constructor(dai, rong) {
+      this.dai = dai;
+      this.rong = rong;
+    }
+      getAreage() {
+          return "Diện tích hình chữ nhật là: " + this.dai * this.rong
+      }
+      getPerimete() {
+        return "Chu vi hình chữ nhật là: " + (this.dai + this.rong) * 2
+      }
+    }
+  let rectangle1 = new rectangle (chieurong, chieucao);
+  alert(rectangle1.getAreage());
+  alert(rectangle1.getPerimete());
+
+
+</script>
+</body>
+</html>
